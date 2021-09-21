@@ -1,0 +1,59 @@
+
+<input type="text" [formControl]="search"/>
+<div  role="navigation" class="div mat-list-base p-1 mat-elevation-z4">
+    <div  routerlink="/" class="div mat-focus-indicator active-category"
+        tabindex="0">
+        <div class="div-content">
+            <div  class="mat-ripple div-ripple"></div>
+            <div class="mat-list-text" ></div><button >All Categories</button>
+        </div>
+    </div>
+    <div  role="separator" class="div div-horizontal"
+        aria-orientation="horizontal"></div>
+    <div  routerlink="/filter"
+        class="div mat-focus-indicator ng-star-inserted" tabindex="0">
+        <div class="div-content">
+            <div  class="mat-ripple div-ripple"></div>
+            <div class="mat-list-text"></div><button (click)="filterCategory('Biography')" >Biography</button>
+            <div  role="separator" class="div div-horizontal"
+                aria-orientation="horizontal"></div>
+        </div>
+    </div>
+    <div  routerlink="/filter"
+        class="div mat-focus-indicator ng-star-inserted" tabindex="0">
+        <div class="div-content">
+            <div  class="mat-ripple div-ripple"></div>
+            <div class="mat-list-text"></div><button (click)="filterCategory('Fiction')">Fiction</button>
+            <div  role="separator" class="div div-horizontal"
+                aria-orientation="horizontal"></div>
+        </div>
+    </div>
+    <div  routerlink="/filter"
+        class="div mat-focus-indicator ng-star-inserted" tabindex="0">
+        <div class="div-content">
+            <div  class="mat-ripple div-ripple"></div>
+            <div class="mat-list-text"></div><a >Mystery</a>
+            <div  role="separator" class="div div-horizontal"
+                aria-orientation="horizontal"></div>
+        </div>
+    </div>
+    <div  routerlink="/filter"
+        class="div mat-focus-indicator ng-star-inserted" tabindex="0">
+        <div class="div-content">
+            <div  class="mat-ripple div-ripple"></div>
+            <div class="mat-list-text"></div><a >Fantasy</a>
+            <div  role="separator" class="div div-horizontal"
+                aria-orientation="horizontal"></div>
+        </div>
+    </div>
+    <div  routerlink="/filter"
+        class="div mat-focus-indicator ng-star-inserted" tabindex="0">
+        <div class="div-content">
+            <div  class="mat-ripple div-ripple"></div>
+            <div class="mat-list-text"></div><a >Romance</a>
+            <div  role="separator" class="div div-horizontal"
+                aria-orientation="horizontal"></div>
+        </div>
+    </div>
+    <!---->
+</div>

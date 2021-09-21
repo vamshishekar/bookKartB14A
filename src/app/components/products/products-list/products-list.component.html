@@ -1,0 +1,11 @@
+<!-- <p>products-list works!</p> -->
+
+<div style="display: flex">
+
+<app-product-filters (filter)="readFilter($event)" (filterByText)="filterByTextFn($event)"></app-product-filters>
+<ng-container *ngFor = "let item of productListFiltered">
+
+    <app-product-card [product]="item"></app-product-card>
+
+</ng-container>
+</div>

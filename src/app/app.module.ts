@@ -6,15 +6,26 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BookComponent } from './components/book/book.component';
 import { HeadersInterceptor } from './shared/header.interceptor';
+import { ProductCardComponent } from './components/products/product-card/product-card.component';
+import { ProductsListComponent } from './components/products/products-list/products-list.component';
+import { ProductFiltersComponent } from './components/products/product-filters/product-filters.component';
+import { ProductModule } from './components/products/product.module';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent
+    BookComponent,
+    ProductCardComponent,
+    ProductsListComponent,
+    ProductFiltersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ProductModule,
+
+    ReactiveFormsModule
   ],
   providers: [ { provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true } ],
   bootstrap: [AppComponent]
