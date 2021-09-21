@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 {
+  path: 'user' ,  loadChildren: () => import('./components/user/user.module').then(m => m.UserModule),
+},
+{
   path: 'products' ,  loadChildren: () => import('./components/products/product.module').then(m => m.ProductModule)
 }
 
