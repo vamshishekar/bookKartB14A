@@ -12,7 +12,7 @@ export class BookComponent implements OnInit {
 
   ngOnInit(): void {
     // this.bookService.login().subscribe((x: any) => sessionStorage.setItem('login',x.token));
-    this.bookService.getBooks().subscribe();
+    this.bookService.getBooks().pipe().subscribe();
   }
 
   checkoutSomething() {

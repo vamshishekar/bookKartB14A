@@ -3,6 +3,7 @@ import { ProductRoutingModule } from './product-routing.module';
 
 @NgModule({
   declarations: [
+    
   ],
   imports: [
     ProductRoutingModule

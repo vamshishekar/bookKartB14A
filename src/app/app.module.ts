@@ -10,10 +10,12 @@ import { ProductCardComponent } from './components/products/product-card/product
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import { ProductFiltersComponent } from './components/products/product-filters/product-filters.component';
 import { ProductModule } from './components/products/product.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/user/register/register.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { UserModule } from './components/user/user.module';
+import { PartialModule } from './components/partial/partial.module';
+import { LoginModule } from './components/login/login.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,10 @@ import { UserModule } from './components/user/user.module';
     HttpClientModule,
     ProductModule,
     UserModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    PartialModule,
+    LoginModule
   ],
   providers: [ { provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true } ],
   bootstrap: [AppComponent]

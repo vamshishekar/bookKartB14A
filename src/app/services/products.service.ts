@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -8,9 +9,9 @@ import { environment } from '../../environments/environment';
 export class ProductsService {
 
   constructor(private http: HttpClient) { }
-  private readonly URL = environment.url;
-  getProductsList() {
-    return this.http.get(this.URL + '/book/');
+  private readonly URL = "";// environment.url;
+  getProductsList(): Observable<any> {
+    return of('hi');//this.http.get("https://jsonplaceholder.typicode.com/comments");//this.URL + '/book/');
   }
 
 
