@@ -35,7 +35,8 @@ import { LoginModule } from './components/login/login.module';
     FormsModule,
     ReactiveFormsModule,
     PartialModule,
-    LoginModule
+    LoginModule,
+    
   ],
   providers: [ { provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true } ],
   bootstrap: [AppComponent]
