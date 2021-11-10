@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookComponent } from './components/book/book.component';
+import { ActivateChildGuard } from './shared/guards/activate-child.guard';
+import { AuthGuard } from './shared/guards/auth.guard';
+import { DeactivateGuard } from './shared/guards/deactivate.guard';
+import { ResolveGuard } from './shared/guards/resolve.guard';
 
 const routes: Routes = [
 {
-  path: 'user' ,  loadChildren: () => import('./components/user/user.module').then(m => m.UserModule),
+  path: 'user' ,  loadChildren: () => import('./components/user/user.module').then(m => m.UserModule), canActivateChild: [ActivateChildGuard],
 },
 {
   path: 'products' ,  loadChildren: () => import('./components/products/product.module').then(m => m.ProductModule)
@@ -18,7 +22,7 @@ const routes: Routes = [
 
 {
 path: 'book',
-component: BookComponent
+component: BookComponent, canActivate: [AuthGuard], canDeactivate: [DeactivateGuard], resolve: [ResolveGuard]
 
 
 }
