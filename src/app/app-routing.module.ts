@@ -4,12 +4,22 @@ import { BookComponent } from './components/book/book.component';
 import { ActivateChildGuard } from './shared/guards/activate-child.guard';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { DeactivateGuard } from './shared/guards/deactivate.guard';
+import { LoadingGuard } from './shared/guards/loading.guard';
 import { ResolveGuard } from './shared/guards/resolve.guard';
 
+
 const routes: Routes = [
+// {
+//   path: 'user' ,  loadChildren: () => import('./components/user/user.module').then(m => m.UserModule), 
+//   canActivateChild: [ActivateChildGuard], canLoad: [LoadingGuard],
+// },
+
 {
-  path: 'user' ,  loadChildren: () => import('./components/user/user.module').then(m => m.UserModule), canActivateChild: [ActivateChildGuard],
+  path: 'user' ,  loadChildren: () => import('./components/user/user.module').then(m => m.UserModule), 
+  canLoad: [LoadingGuard],
 },
+
+
 {
   path: 'products' ,  loadChildren: () => import('./components/products/product.module').then(m => m.ProductModule)
 },
